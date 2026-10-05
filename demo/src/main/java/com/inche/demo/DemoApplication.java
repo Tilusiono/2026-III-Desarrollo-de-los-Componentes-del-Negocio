@@ -48,6 +48,15 @@ public class DemoApplication {
 
 			System.out.println("************************************* ");
 
+		
+			Usuario usuario3 = new Alumno(3, "Demo", "Mejia", new Date("31/1/2000"), "CICLO 4");
+			
+			System.out.println("Datos Usuario: " + usuario3.getNombre() + " " + usuario3.getApellido());
+			System.out.println("Edad del usuario: " + usuario3.getFechaNacimiento() + " - " + usuario3.getEdad());
+			System.out.println("Cantidad de usuarios: " + usuario3.getCantidadUsuarios());
+
+			System.out.println("************************************* ");
+
 			/*
 			 * Ejecutar
 			 * Estructuras.ProcesoPublico2();

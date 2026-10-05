@@ -10,7 +10,7 @@ public class Usuario {
     private Date fechaNacimiento;
     private TipoUsuario tipoUsuario; //FK: Relación con la clase TipoUsuario
     
-    private int cantidadUsuarios=0; 
+    private static int cantidadUsuarios=0; 
 
     public Usuario(int id,String nom,String ape,Date fNac,TipoUsuario tipo) {
         this.idUsuario = id;
