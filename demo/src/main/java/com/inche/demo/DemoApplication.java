@@ -7,7 +7,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.inche.demo.clases.Alumno;
-import com.inche.demo.clases.Docente;
 import com.inche.demo.clases.TipoUsuario;
 import com.inche.demo.clases.Usuario;
 
@@ -20,9 +19,9 @@ public class DemoApplication {
 
 		try {
 
-			TipoUsuario administrativo = new TipoUsuario("DOCE", "Docente", false);
+			// TipoUsuario administrativo = new TipoUsuario("DOCE", "Docente", false);
 
-			Usuario usuario = new Docente(1, "Juan", "Perez", new Date("19/8/1993"), "Programacion");
+			Usuario usuario = new Alumno(1, "Juan", "Perez", new Date("19/8/1993"), "Programacion");
 			usuario.setNombre("Juan");
 			usuario.setApellido("Perez");
 			Date fechaNacimiento = new Date("19/8/1993");
@@ -32,6 +31,8 @@ public class DemoApplication {
 			System.out.println("Datos Usuario: " + usuario.getNombre() + " " + usuario.getApellido());
 			System.out.println("Edad del usuario: " + usuario.getFechaNacimiento() + " - " + usuario.getEdad());
 			System.out.println("Cantidad de usuarios: " + usuario.getCantidadUsuarios());
+			System.out.println("Cantidad de docentes: " + usuario.cantidadDocentes);
+			System.out.println("Cantidad de alumnos: " + usuario.getCantidadAlumnos());
 			System.out.println("************************************* ");
 			
 			
@@ -45,6 +46,8 @@ public class DemoApplication {
 			System.out.println("Datos Usuario: " + usuario2.getNombre() + " " + usuario2.getApellido());
 			System.out.println("Edad del usuario: " + usuario2.getFechaNacimiento() + " - " + usuario2.getEdad());
 			System.out.println("Cantidad de usuarios: " + usuario2.getCantidadUsuarios());
+			System.out.println("Cantidad de docentes: " + usuario2.cantidadDocentes);
+			System.out.println("Cantidad de alumnos: " + usuario2.getCantidadAlumnos());
 
 			System.out.println("************************************* ");
 
@@ -54,7 +57,25 @@ public class DemoApplication {
 			System.out.println("Datos Usuario: " + usuario3.getNombre() + " " + usuario3.getApellido());
 			System.out.println("Edad del usuario: " + usuario3.getFechaNacimiento() + " - " + usuario3.getEdad());
 			System.out.println("Cantidad de usuarios: " + usuario3.getCantidadUsuarios());
+			System.out.println("Cantidad de docentes: " + usuario3.cantidadDocentes);
+			System.out.println("Cantidad de alumnos: " + usuario3.getCantidadAlumnos());
 
+			System.out.println("************************************* ");
+
+			Usuario usuario4 = new Alumno(3, "Alex", "Rojas", new Date("31/3/2001"), "CICLO 5");
+			
+			System.out.println("Datos Usuario: " + usuario4.getNombre() + " " + usuario4.getApellido());
+			System.out.println("Edad del usuario: " + usuario4.getFechaNacimiento() + " - " + usuario4.getEdad());
+			System.out.println("Cantidad de usuarios: " + usuario4.getCantidadUsuarios());
+			System.out.println("Cantidad de docentes: " + usuario4.cantidadDocentes);
+			System.out.println("Cantidad de alumnos: " + usuario4.getCantidadAlumnos());
+			System.out.println("************************************* ");
+
+			TipoUsuario docente = new TipoUsuario("DOCE", "Docente", true);
+			usuario4.setTipoUsuario(docente);
+			System.out.println("Cantidad de usuarios: " + usuario4.getCantidadUsuarios());
+			System.out.println("Cantidad de docentes: " + usuario4.cantidadDocentes);
+			System.out.println("Cantidad de alumnos: " + usuario4.getCantidadAlumnos());
 			System.out.println("************************************* ");
 
 			/*

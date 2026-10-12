@@ -8,13 +8,12 @@ public class Docente extends Usuario {
     
 
     
-    TipoUsuario profesor = new TipoUsuario("DOCE", "Docente");
+    static TipoUsuario profesor = new TipoUsuario("DOCE", "Docente");
 
     public Docente(int id, String nom, String ape, Date fNac
         , String especialidad
     ) {
-        super(id, nom, ape, fNac);
-        super.setTipoUsuario(profesor);
+        super(id, nom, ape, fNac,profesor);
         this.especialidad = especialidad;
     }
 

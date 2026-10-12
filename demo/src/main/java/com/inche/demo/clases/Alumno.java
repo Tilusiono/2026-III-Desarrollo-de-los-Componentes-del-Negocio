@@ -6,11 +6,11 @@ public class Alumno extends Usuario {
 
     private String cicloAcademico;
 
-	TipoUsuario alumno = new TipoUsuario("ALUM", "Alumno", true);		
+	static TipoUsuario alumno = new TipoUsuario("ALUM", "Alumno", true);		
 
-    public Alumno(int id, String nom, String ape, Date fNac, String cicloAcademico) {
-        super(id, nom, ape, fNac);
-        super.setTipoUsuario(alumno);
+    public Alumno(int id, String nom, String ape, Date fNac, 
+        String cicloAcademico) {
+        super(id, nom, ape, fNac,alumno);
         this.cicloAcademico = cicloAcademico;
     }
 
